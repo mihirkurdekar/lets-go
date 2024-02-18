@@ -1,6 +1,7 @@
 # Lets GO!
 
-A microservice created to learn go with help of tutorials from Net Ninja.
+A microservice created to learn go with help of tutorials from [Net Ninja](https://www.youtube.com/@NetNinja).
+
 Tutorials link: https://youtu.be/wpnN3RIRSxs?si=mQjDdeOkhjVER19s 
 
 ## Pre requisites
