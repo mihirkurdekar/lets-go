@@ -27,7 +27,7 @@ func (a *App) loadOrderRoutes(router chi.Router) {
 
 	router.Post("/", orderHander.Create)
 	router.Get("/", orderHander.List)
-	router.Get("/{id}", orderHander.GetById)
-	router.Put("/{id}", orderHander.UpdateById)
-	router.Delete("/{id}", orderHander.DeleteById)
+	router.Get("/{id}", orderHander.GetByID)
+	router.Put("/{id}", orderHander.UpdateByID)
+	router.Delete("/{id}", orderHander.DeleteByID)
 }
