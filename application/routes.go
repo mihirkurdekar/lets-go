@@ -8,7 +8,7 @@ import (
 	"github.com/mihirkurdekar/lets-go/handler"
 )
 
-func loadRoutes() *chi.Mux {
+func (a *App) loadRoutes() {
 	router := chi.NewRouter()
 
 	router.Use(middleware.Logger)
@@ -17,12 +17,12 @@ func loadRoutes() *chi.Mux {
 		w.WriteHeader(http.StatusOK)
 	})
 
-	router.Route("/orders", loadOrderRoutes)
+	router.Route("/orders", a.loadOrderRoutes)
 
-	return router
+	a.router = router
 }
 
-func loadOrderRoutes(router chi.Router) {
+func (a *App) loadOrderRoutes(router chi.Router) {
 	orderHander := &handler.Order{}
 
 	router.Post("/", orderHander.Create)
